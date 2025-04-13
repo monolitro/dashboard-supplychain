@@ -1,0 +1,343 @@
+/* Estilos adicionales para mejorar la experiencia de usuario */
+:root {
+    --primary-color: #2C3E50;
+    --secondary-color: #3498DB;
+    --accent-color: #E74C3C;
+    --light-color: #ECF0F1;
+    --dark-color: #2C3E50;
+    --success-color: #2ECC71;
+    --warning-color: #F4D03F;
+    --danger-color: #E74C3C;
+    --info-color: #3498DB;
+}
+
+/* Mejoras generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+/* Animaciones y transiciones */
+.card, .btn, .nav-link, .list-group-item {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Mejoras en la navegación */
+.navbar {
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 10px 15px !important;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Mejoras en la sección hero */
+.hero-section {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    padding: 80px 0;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section h1 {
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 2.8rem;
+}
+
+.hero-section .lead {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+.hero-section i {
+    opacity: 0.8;
+}
+
+/* Mejoras en las tarjetas */
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+}
+
+.card-header {
+    padding: 15px 20px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-bottom: none;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+/* Mejoras en los KPIs */
+.kpi-card {
+    padding: 30px 20px;
+    text-align: center;
+    background: white;
+    height: 100%;
+}
+
+.kpi-value {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.kpi-label {
+    font-size: 1.1rem;
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+/* Mejoras en las pestañas */
+.nav-tabs {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    border-radius: 10px 10px 0 0;
+    padding: 12px 20px;
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-right: 5px;
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.nav-tabs .nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.nav-tabs .nav-link.active {
+    background-color: white;
+    color: var(--secondary-color) !important;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.tab-content {
+    border-radius: 0 10px 10px 10px;
+    padding: 30px;
+}
+
+/* Mejoras en las imágenes */
+.img-fluid {
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Mejoras en las secciones de recomendaciones */
+.recommendation-section {
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(46, 204, 113, 0.1);
+    border-left: 5px solid var(--success-color);
+}
+
+.recommendation-section h5 {
+    color: var(--dark-color);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.recommendation-section p {
+    margin-bottom: 0;
+    color: #555;
+}
+
+/* Mejoras en la sección de documentación */
+.list-group-item {
+    padding: 15px 20px;
+    border: none;
+    margin-bottom: 5px;
+    border-radius: 8px !important;
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.list-group-item:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+    transform: translateX(5px);
+}
+
+.list-group-item i {
+    margin-right: 10px;
+}
+
+/* Mejoras en el footer */
+.footer {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1a252f 100%);
+    padding: 50px 0 30px;
+    margin-top: 80px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer h5 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.footer a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer a:hover {
+    color: white;
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+/* Mejoras para dispositivos móviles */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 50px 0;
+        text-align: center;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-section .lead {
+        font-size: 1.1rem;
+    }
+    
+    .hero-section i {
+        margin-top: 30px;
+    }
+    
+    .kpi-card {
+        margin-bottom: 20px;
+    }
+    
+    .kpi-value {
+        font-size: 2.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .card-header {
+        font-size: 1rem;
+    }
+    
+    .tab-content {
+        padding: 20px 15px;
+    }
+    
+    .nav-tabs .nav-link {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Animaciones para elementos clave */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.section-title, .kpi-card, .card {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.kpi-card:nth-child(1) { animation-delay: 0.1s; }
+.kpi-card:nth-child(2) { animation-delay: 0.2s; }
+.kpi-card:nth-child(3) { animation-delay: 0.3s; }
+.kpi-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Mejoras en los gráficos */
+.chart-container {
+    position: relative;
+    margin: auto;
+    height: 400px;
+    width: 100%;
+}
+
+/* Mejoras en las alertas */
+.alert {
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border: none;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Botón de volver arriba */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+}
+
+.back-to-top:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-5px);
+}

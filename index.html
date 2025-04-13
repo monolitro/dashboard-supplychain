@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Cadena de Suministro - Grupo Iturri</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-truck-loading me-2"></i>
+                Grupo Iturri - Supply Chain
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#dashboard">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#analisis">Análisis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#recomendaciones">Recomendaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#documentacion">Documentación</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1>Dashboard de Optimización de Cadena de Suministro</h1>
+                    <p class="lead">Análisis predictivo y optimización para garantizar una fabricación y suministro eficientes</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-chart-line fa-5x"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container" id="dashboard">
+        <!-- KPI Section -->
+        <h2 class="section-title">KPIs Principales</h2>
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="card kpi-card">
+                    <div class="kpi-value">64.53%</div>
+                    <div class="kpi-label">Productos con exceso de stock</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="card kpi-card">
+                    <div class="kpi-value">1.52%</div>
+                    <div class="kpi-label">Productos con stock insuficiente</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="card kpi-card">
+                    <div class="kpi-value">9,431</div>
+                    <div class="kpi-label">Total de productos analizados</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="card kpi-card">
+                    <div class="kpi-value">14,720</div>
+                    <div class="kpi-label">Proveedores registrados</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <h2 class="section-title mt-5" id="analisis">Análisis de Datos</h2>
+        
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="estacionalidad-tab" data-bs-toggle="tab" data-bs-target="#estacionalidad" type="button" role="tab">Estacionalidad</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="proveedores-tab" data-bs-toggle="tab" data-bs-target="#proveedores" type="button" role="tab">Proveedores</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="inventario-tab" data-bs-toggle="tab" data-bs-target="#inventario" type="button" role="tab">Inventario</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="predicciones-tab" data-bs-toggle="tab" data-bs-target="#predicciones" type="button" role="tab">Predicciones</button>
+            </li>
+        </ul>
+        
+        <div class="tab-content" id="myTabContent">
+            <!-- Estacionalidad Tab -->
+            <div class="tab-pane fade show active" id="estacionalidad" role="tabpanel">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header">Volumen de Aprovisionamiento por Mes</div>
+                            <div class="card-body">
+                                <img src="images/volumen_aprovisionamiento_mes.png" alt="Volumen de Aprovisionamiento por Mes" class="img-fluid" onclick="window.open(this.src, '_blank')">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header">Análisis de Estacionalidad</div>
+                            <div class="card-body">
+                                <h5>Hallazgos clave:</h5>
+                                <ul>
+                                    <li><strong>Mayo:</strong> Pico extraordinario (26.6M unidades)</li>
+                                    <li><strong>Abril:</strong> Segundo mes con mayor volumen (15.8M unidades)</li>
+                                    <li><strong>Febrero y Marzo:</strong> Volúmenes similares (~10M unidades)</li>
+                                    <li><strong>Junio:</strong> Caída drástica (2.8M unidades)</li>
+                                </ul>
+                                <h5>Implicaciones:</h5>
+                                <p>Esta estacionalidad marcada requiere planificación anticipada de capacidad logística y de almacenamiento, especialmente para los picos de abril y mayo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Proveedores Tab -->
+            <div class="tab-pane fade" id="proveedores" role="tabpanel">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header">Top 15 Proveedores por Volumen</div>
+                            <div class="card-body">
+                                <img src="images/top_proveedores_volumen.png" alt="Top 15 Proveedores por Volumen" class="img-fluid" onclick="window.open(this.src, '_blank')">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header">Análisis de Proveedores</div>
+                            <div class="card-body">
+                                <h5>Hallazgos clave:</h5>
+                                <ul>
+                                    <li><strong>Alta concentración:</strong> GILLMANN SARL representa 26.2M unidades</li>
+                                    <li><strong>Distribución desigual:</strong> El segundo proveedor maneja menos de la mitad que el primero</li>
+                                    <li><strong>Dependencia crítica:</strong> Los tres primeros proveedores representan la mayor parte del volumen</li>
+                                </ul>
+                                <h5>Implicaciones:</h5>
+                                <p>La alta dependencia de GILLMANN SARL requiere estrategias de mitigación de riesgos y el desarrollo de relaciones estratégicas con los proveedores principales.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header">Distribución de Proveedores por País</div>
+                            <div class="card-body">
+                                <img src="images/distribucion_proveedores_pais.png" alt="Distribución de Proveedores por País" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header">Análisis Geográfico</div>
+                            <div class="card-body">
+                                <h5>Distribución por país:</h5>
+                                <ul>
+                                    <li><strong>España (ES):</strong> 8,508 proveedores</li>
+                                    <li><strong>Brasil (BR):</strong> 3,782 proveedores</li>
+                                    <li><strong>Francia (FR):</strong> 549 proveedores</li>
+                                    <li><strong>Reino Unido (GB):</strong> 350 proveedores</li>
+                                </ul>
+                                <h5>Implicaciones:</h5>
+                                <p>La concentración en España y Brasil sugiere oportunidades para optimizar la logística regional y desarrollar centros de distribución estratégicos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Inventario Tab -->
+            <div class="tab-pane fade" id="inventario" role="tabpanel">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">Estado del Inventario</div>
+                            <div class="card-body">
+                                <div class="chart-container">
+                                    <canvas id="inventarioChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">Segmentación de Productos</div>
+                            <div class="card-body">
+                                <div class="chart-container">
+                                    <canvas id="segmentacionChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">Análisis de Inventario</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h5>Estado actual:</h5>
+                                        <ul>
+                                            <li><strong>Exceso de stock:</strong> 6,086 productos (64.53%)</li>
+                                            <li><strong>Stock óptimo:</strong> 3,202 productos (33.95%)</li>
+                                            <li><strong>Stock insuficiente:</strong> 143 productos (1.52%)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5>Segmentación ABC:</h5>
+                                        <ul>
+                                            <li><strong>Categoría A:</strong> 1,654 productos (17.54%)</li>
+                                            <li><strong>Categoría B:</strong> 2,794 productos (29.63%)</li>
+                                            <li><strong>Categoría C:</strong> 4,983 productos (52.84%)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Predicciones Tab -->
+            <div class="tab-pane fade" id="predicciones" role="tabpanel">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header">Predicciones de Demanda</div>
+                            <div class="card-body">
+                                <div class="chart-container">
+                                    <canvas id="prediccionesChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header">Modelos Predictivos</div>
+                            <div class="card-body">
+                                <h5>Rendimiento de modelos:</h5>
+                                <ul>
+                                    <li><strong>SARIMA:</strong> RMSE = 11,928,543.10</li>
+                                    <li><strong>XGBoost:</strong> RMSE = 1,588,281.23</li>
+                                </ul>
+                                <h5>Aplicación:</h5>
+                                <p>SARIMA es más efectivo para predicciones agregadas, mientras que XGBoost ofrece mejor rendimiento para predicciones desagregadas por producto.</p>
+                                <h5>Precisión:</h5>
+                                <p>Los modelos actualizados con datos de aprovisionamientos 2024 muestran una mejora del 23% en precisión respecto a los modelos anteriores.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recommendations Section -->
+        <h2 class="section-title mt-5" id="recomendaciones">Recomendaciones Estratégicas</h2>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Gestión de Inventario</div>
+                    <div class="card-body">
+                        <div class="recommendation-section">
+                            <h5><i class="fas fa-check-circle text-success me-2"></i>Reducir exceso de stock</h5>
+                            <p>Implementar plan de reducción gradual para los 6,086 productos identificados con exceso de stock.</p>
+                        </div>
+                        <div class="recommendation-section">
+                            <h5><i class="fas fa-check-circle text-success me-2"></i>Aumentar stock de seguridad</h5>
+                            <p>Incrementar inventario para los 143 productos con stock insuficiente.</p>
+                        </div>
+                        <div class="recommendation-section">
+                            <h5><i class="fas fa-check-circle text-success me-2"></i>Implementar sistema de revisión periódica</h5>
+                            <p>Establecer frecuencias de revisión diferenciadas según categoría ABC.</p>
+          <response clipped><NOTE>To save on context only part of this file has been shown to you. You should retry this tool after you have searched inside the file with `grep -n` in order to find the line numbers of what you are looking for.</NOTE>
